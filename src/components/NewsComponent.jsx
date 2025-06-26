@@ -12,7 +12,7 @@ const NewsComponent = (props) => {
     },[props.search])
     
     async function fetchNews(){
-        let data=await fetch(`https://newsapi.org/v2/everything?q=${props.search===true ? props.query : props.query+'india'}&apiKey=6bf9de0d811f4ef6b4233e4b6594f3a2`);
+        let data=await fetch(`https://newsapi.org/v2/everything?q=${props.search===true ? props.query : props.query+'india'}&apiKey=3e8c3b6c777a47f394eddd21d4d66474`);
         let parsedData=await data.json();
         setArticles(parsedData.articles);
         console.log(parsedData);
